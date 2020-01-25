@@ -1,0 +1,53 @@
+<base href="/">
+<p>pizza works!</p>
+
+<p>Поставить сюда поиск</p>
+<div class="listpizza">
+<mat-card class="example-card" *ngFor="let AllListPizza of ListPizza">
+    <mat-card-title>{{AllListPizza.name}}</mat-card-title>
+    <mat-card-subtitle>{{AllListPizza.size}}</mat-card-subtitle>
+  <img mat-card-image src={{AllListPizza.image}} alt="pizza">
+  <mat-card-actions>
+    <button mat-raised-button (click)="addPizzaInCart(AllListPizza)" color="primary">Buy</button>
+  </mat-card-actions>
+</mat-card>
+</div>
+
+
+
+
+
+
+<!--<div class="col s3">-->
+  <!--<div class="card">-->
+    <!--<div *ngFor="let AllListPizza of ListPizza">-->
+      <!--<span class="card-title">{{AllListPizza.name}}</span>-->
+        <!--<div class="card-img">-->
+          <!--<img style="width:100px" src={{AllListPizza.image}}/>-->
+        <!--</div>-->
+  <!--<div class="card-body">-->
+  <!--<p>{{AllListPizza.size}} {{AllListPizza.price}}</p>-->
+  <!--</div>-->
+      <!--<div>-->
+        <!--<button (click)="addPizzaInCart(AllListPizza)">Добавить пиццу в корзину</button>-->
+      <!--</div>-->
+
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+
+
+<!--<div *ngFor="let AllListPizza of ListPizza">-->
+  <!--<ul>-->
+    <!--<li>{{AllListPizza.id}}{{AllListPizza.name}}{{AllListPizza.size}}{{AllListPizza.price}}-->
+    <!--<a [routerLink]="['http://localhost:8080/api/pizza/toorder', { id:AllListPizza.id }]">Buy Now</a>-->
+    <!--<button (click)="addPizzaInOrder(AllListPizza)">Добавить пиццу в корзину</button>-->
+    <!--</li>-->
+  <!--</ul>-->
+<!--</div>-->
+
+
+
+

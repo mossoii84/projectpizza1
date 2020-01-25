@@ -1,0 +1,180 @@
+<p>You Order</p>
+<!--попробовать этот вариант-->
+<!--<div class="dropdown">-->
+<!--<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--Dropdown button-->
+<!--</button>-->
+<!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+<!--<a class="dropdown-item" href="#">Action</a>-->
+<!--<a class="dropdown-item" href="#">Another action</a>-->
+<!--<a class="dropdown-item" href="#">Something else here</a>-->
+<!--</div>-->
+<!--</div>-->
+
+<div *ngFor="let pizzaInOrder of getAllOrder" class="butodersbumner">
+<span>Info order № {{pizzaInOrder.id}} date: {{pizzaInOrder.dateCreatOrder}}</span>
+      <table class="table table-bordered table-dark" *ngFor="let piz of getCart">
+        <tr class="coltext">
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+          <th scope="col">Handle</th>
+        </tr>
+
+        <tr *ngFor="let pizza of piz.pizzaList;let i=index" style="border: 1px solid grey">
+          <td scope="row">{{i+1}}</td>
+          <td><img style="width: 80px" src="{{pizza.image}}"></td>
+          <td>{{pizza.name}}</td>
+          <td>{{pizza.size}}</td>
+          <td>{{pizza.price }}</td>
+        </tr>
+      </table>
+
+</div>
+
+
+
+
+
+
+
+
+<!--<div *ngFor="let pizzaInOrder of getAllOrder" class="butodersbumner">-->
+  <!--<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">-->
+    <!--Info order №{{pizzaInOrder.id}} date:{{pizzaInOrder.dateCreatOrder}}-->
+  <!--</button>-->
+
+  <!--<div class="collapse" id="collapseExample">-->
+    <!--<div class="card card-body">-->
+      <!--<table class="table table-bordered table-dark" *ngFor="let piz of getCart">-->
+        <!--<tr class="coltext">-->
+          <!--<th scope="col">#</th>-->
+          <!--<th scope="col">First</th>-->
+          <!--<th scope="col">Last</th>-->
+          <!--<th scope="col">Handle</th>-->
+          <!--<th scope="col">Handle</th>-->
+        <!--</tr>-->
+
+        <!--<tr *ngFor="let pizza of piz.pizzaList;let i=index" style="border: 1px solid grey">-->
+          <!--<td scope="row">{{i+1}}</td>-->
+          <!--<td><img style="width: 80px" src="{{pizza.image}}"></td>-->
+          <!--<td>{{pizza.name}}</td>-->
+          <!--<td>{{pizza.size}}</td>-->
+          <!--<td>{{pizza.price }}</td>-->
+        <!--</tr>-->
+      <!--</table>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<table>-->
+<!--<tr>-->
+  <!--<div *ngFor="let pizzaInOrder of getAllOrder">-->
+      <!--<div *ngFor="let piz of getCart">-->
+      <!--<div *ngFor="let pizza of piz.pizzaList" style="border: 1px solid grey">-->
+  <!--<td>{{pizzaInOrder.id}}</td>-->
+  <!--<td>{{pizzaInOrder.dateCreatOrder}}</td>-->
+
+      <!--<td> <img style="width: 100px" src="{{pizza.image}}"></td>-->
+      <!--<td>{{pizza.name}}</td>-->
+      <!--<td> {{pizza.size}}</td>-->
+      <!--<td> {{pizza.price }}</td>-->
+      <!--</div></div>-->
+
+  <!--<td><button (click)="infoOrder(pizzaInOrder.id)"  class="btn btn-danger">Info</button></td>-->
+  <!--</div>-->
+<!--</tr>-->
+<!--</table>-->
+
+
+
+<!--<div *ngFor="let pizzaInOrder of getAllOrder">-->
+  <!--{{pizzaInOrder.id}}-->
+  <!--{{pizzaInOrder.dateCreatOrder}}-->
+<!--</div>-->
+
+
+<!--<div class="mat-elevation-z8">-->
+  <!--<mat-table [dataSource]="dataSource"  matSort matSortActive="name" matSortDirection="asc" >-->
+    <!--<ng-container matColumnDef="id">-->
+      <!--<th mat-header-cell *matHeaderCellDef mat-sort-header> id </th>-->
+      <!--<td mat-cell *matCellDef="let element"> {{element.id}} </td>-->
+    <!--</ng-container>-->
+
+  <!--<ng-container matColumnDef="client">-->
+    <!--<th mat-header-cell *matHeaderCellDef mat-sort-header> client </th>-->
+    <!--<td mat-cell *matCellDef="let element"> {{element.client.name}} </td>-->
+  <!--</ng-container>-->
+
+  <!--<ng-container matColumnDef="address">-->
+    <!--<th mat-header-cell *matHeaderCellDef mat-sort-header> address </th>-->
+    <!--<td mat-cell *matCellDef="let element"> {{element.address}} </td>-->
+  <!--</ng-container>-->
+
+  <!--<ng-container matColumnDef="pizza.image">-->
+    <!--<th mat-header-cell *matHeaderCellDef mat-sort-header> image </th>-->
+    <!--<td mat-cell *matCellDef="let element">-->
+      <!--<div *ngFor="let pizza of element.pizzaList">-->
+        <!--<img style="width:100px" src= {{pizza.image}}/></div>-->
+    <!--</td>-->
+  <!--</ng-container>-->
+  <!--<ng-container matColumnDef="pizza.name">-->
+    <!--<th mat-header-cell *matHeaderCellDef mat-sort-header> name </th>-->
+    <!--<td mat-cell *matCellDef="let element">-->
+      <!--<div *ngFor="let pizza of element.pizzaList"> {{pizza.name}}</div>-->
+    <!--</td>-->
+  <!--</ng-container>-->
+  <!--<ng-container matColumnDef="pizza.price">-->
+    <!--<th mat-header-cell *matHeaderCellDef mat-sort-header> price </th>-->
+    <!--<td mat-cell *matCellDef="let element">-->
+      <!--<div *ngFor="let pizza of element.pizzaList"> {{pizza.price}}</div>-->
+    <!--</td>-->
+  <!--</ng-container>-->
+
+  <!--<ng-container matColumnDef="delete" >-->
+    <!--<th mat-header-cell *matHeaderCellDef> delete </th>-->
+    <!--<td mat-cell *matCellDef="let element">-->
+      <!--<button mat-icon-button  (click)="deleteEmployeeAndProject(element.id)">Delete</button>-->
+    <!--</td>-->
+  <!--</ng-container>-->
+
+  <!--<ng-container matColumnDef="edit" >-->
+    <!--<th mat-header-cell *matHeaderCellDef> edit </th>-->
+    <!--<td mat-cell *matCellDef="let element">-->
+      <!--<button mat-icon-button  (click)="setValueEmployee(element)">Edit</button>-->
+    <!--</td>-->
+  <!--</ng-container>-->
+
+  <!--<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>-->
+  <!--<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>-->
+<!--</mat-table>-->
+<!--</div>-->
+
+
+<!--<div *ngFor="let order of mass">-->
+<!--<div *ngFor="let pizza of order.pizzaList">-->
+<!--<ul>-->
+<!--<li>{{order.id}}</li>-->
+<!--<li>{{order.address}}</li>-->
+<!--<li>{{order.client.id}}</li>-->
+<!--<li>{{pizza.name}} {{pizza.price}}</li>-->
+<!--<img style="width:100px" src={{pizza.image}}/>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+
+

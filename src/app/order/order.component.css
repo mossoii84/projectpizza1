@@ -1,0 +1,15 @@
+
+.butodersbumner
+{  margin: 0 auto;
+  width: 800px;
+}
+.card {
+  display: inline-block;
+  width: 800px;
+}
+.coltext{
+  font-size: 12px;
+}
+.btn{
+  width: 800px;
+}

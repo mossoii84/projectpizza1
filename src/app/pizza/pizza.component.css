@@ -1,0 +1,24 @@
+
+.listpizza{
+  margin: 0 auto;
+  text-align: center;
+}
+.example-card{
+  height: 360px;
+  width: 220px;
+  display: inline-block;
+  border: 1px dashed black;
+  text-align: center;
+  margin: 0 10px 20px 10px;
+}
+.mat-card-image
+{
+  height: 200px;
+  width: 218px;
+}
+mat-button
+{
+  border: 1px dashed black;
+}
+
+

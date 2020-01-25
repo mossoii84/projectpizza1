@@ -1,0 +1,68 @@
+<p>cart works!</p>
+
+
+<div *ngFor="let cart of AllCartList" class="butodersbumnerCart">
+      <table class="table table-bordered table-light">
+        <tr class="coltext badge-warning">
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+          <th scope="col">Handle</th>
+          <th scope="col">Handle</th>
+          <th scope="col">Handle</th>
+          <th scope="col">Handle</th>
+          <th scope="col">Delete</th>
+        </tr>
+
+        <tr *ngFor="let pizza of cart.pizzaList;let i = index" style="border: 1px solid grey">
+          <td scope="row">{{i+1}}</td>
+          <td>{{cart.id}}</td>
+          <td class="imagePizza"><img style="width: 100px;"  src="{{pizza.image}}"></td>
+          <td>{{pizza.id}}</td>
+          <td>{{pizza.name}}</td>
+          <td> {{pizza.size}}</td>
+          <td> {{pizza.price }}</td>
+
+          <td><button (click)="decrease()">-</button>
+            {{count}}
+            <button (click)="increase()">+</button></td>
+
+
+          <td><button (click)="deletePizzaInCart(pizza.id)"  class="btn btn-danger">Delete</button></td>
+       </tr>
+      </table>
+  <td><button (click)="commanderPizzaInCart(cart)" class="btn btn-danger">Commander</button></td>
+</div>
+
+
+
+
+
+
+
+
+<!--<table>-->
+  <!--<tr *ngFor="let cart of AllCartList;">-->
+
+    <!--<div *ngFor="let pizza of cart.pizzaList;let i = index" style="border: 1px solid grey">-->
+      <!--<td>{{i + 1}}</td>-->
+      <!--<td>{{cart.id}}</td>-->
+
+      <!--<td class="imagePizza"><img style="width: 100px;"  src="{{pizza.image}}"></td>-->
+      <!--<td style="width: 20px">{{pizza.id}}</td>-->
+      <!--<td style="width: 120px" >{{pizza.name}}</td>-->
+      <!--<td style="width: 120px" > {{pizza.size}}</td>-->
+      <!--<td style="width: 120px" > {{pizza.price }}</td>-->
+      <!--<td style="width: 120px" >-->
+        <!--<button (click)="decrease()">-</button>-->
+        <!--{{this.count}}-->
+        <!--<button (click)="increase()">+</button></td>-->
+
+      <!--<td><button (click)="deletePizzaInCart(pizza.id)"  class="btn btn-danger">Delete</button></td>-->
+
+      <!--</div></tr>-->
+<!--</table>-->
+
+
+

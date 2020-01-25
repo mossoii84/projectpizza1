@@ -1,0 +1,7 @@
+<p>panier works!</p>
+
+<div *ngFor="let cartPizza of cart">
+  {{cartPizza.id}}{{cartPizza.namepizza}}
+  <button (click)="inBD(cartPizza)" >В БД</button>
+</div>
+
